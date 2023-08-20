@@ -1,10 +1,16 @@
-<a style="cursor: pointer;" class="list-group-item clearfix" 
-(click)="onSelected()">
+<a 
+style="cursor: pointer;" 
+[routerLink]="[index]"
+class="list-group-item clearfix">
     <div class="pull-left">
         <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
         <p class="list-group-item-text">{{ recipe.description }}</p>
     </div>
     <span class="pull-right">
-        <img style="max-height: 50px;" [src]="recipe.imagePath" alt="{{ recipe.name }}" class="img-responsive">
+        <img 
+        style="max-height: 50px;" 
+        [src]="recipe.imagePath" 
+        alt="{{ recipe.name }}" 
+        class="img-responsive">
     </span>
 </a>
